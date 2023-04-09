@@ -23,34 +23,8 @@
 </style>
 
 <script setup>
-import { Octokit } from "@octokit/core";
-
 import { ref } from "vue";
 
     const isCurrent = ref(false) 
-
-   // Octokit.js
-    // https://github.com/octokit/core.js#readme
-    const octokit = new Octokit({
-        auth: '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'
-    })
-
-    
-    console.log({
-        "octokit":octokit
-    })
-
-    
-
-
-    // await octokit.request('GET /users/{jugaz}/repos', {
-    //     username: 'jugaz',
-    //     headers: {
-    //         'X-GitHub-Api-Version': '2022-11-28'
-    //     }
-    // })
-
-
-
 
 </script>
