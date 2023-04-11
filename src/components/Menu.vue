@@ -5,12 +5,10 @@
             <path d="M9 20v-16l7 16v-16" />
         </svg>
         <div class="flex">
-            <svg xmlns="http://www.w3.org/2000/svg" class="cursor-pointer" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="#7696A8" fill="none" stroke-linecap="round" stroke-linejoin="round" @click="isCurrent = !isCurrent">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                <circle cx="10" cy="10" r="7" />
-                <line x1="21" y1="21" x2="15" y2="15" />
-            </svg>
-            <input type="text" placeholder="Hola" v-if="isCurrent">
+            <form>
+                <input class="xxs:py-1 px-4 w-[120px] xs:w-[220px] border-[1px] border-white rounded-none border-solid text-white bg-[#253133]" type="text" placeholder="Buscar" />
+            </form>
+            
         </div>
 
 
@@ -21,10 +19,3 @@
 <style lang="scss" scoped>
 
 </style>
-
-<script setup>
-import { ref } from "vue";
-
-    const isCurrent = ref(false) 
-
-</script>
