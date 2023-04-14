@@ -2,14 +2,18 @@
 import { ref } from "vue";
 import Menu from "@/components/Menu.vue";
 import Cards from "@/components/Cards.vue";
-import CardsHbo from "@/components/CardsHbo.vue";
-import CardsNetflix from "@/components/CardsNetflix.vue";
+
+
 
 
 const cards = ref([
-  { id: 1, cardName:'default', image: "http://image.tmdb.org/t/p/w1280/9n2tJBplPbgR2ca05hS5CKXwP2c.jpg", title: 'Front End', tags: ['Vue','Tailwind']},
-  { id: 2, cardName:'default', image: "http://image.tmdb.org/t/p/w1280/9n2tJBplPbgR2ca05hS5CKXwP2c.jpg", title: 'Back End', tags: ["Node", "Express"] },
-  { id: 3, cardName:'default', image: "http://image.tmdb.org/t/p/w1280/9n2tJBplPbgR2ca05hS5CKXwP2c.jpg", title: 'Mobile', tags: ["React Native", "Firebase"] },
+  { cardName:'default', image: "http://image.tmdb.org/t/p/w1280/9n2tJBplPbgR2ca05hS5CKXwP2c.jpg", title: 'Carrusel Vue', tags: {title: 'Vue', desc: 'Tailwind'}, isHovering:false},
+  { cardName:'default', image: "http://image.tmdb.org/t/p/w1280/9n2tJBplPbgR2ca05hS5CKXwP2c.jpg", title: 'Carrusel Node', tags: {title: 'Node', desc: 'Express'}, isHovering:false },
+  { cardName:'default', image: "http://image.tmdb.org/t/p/w1280/9n2tJBplPbgR2ca05hS5CKXwP2c.jpg", title: 'Carrusel React', tags: {title: 'React Native', desc: 'Firebase'}, isHovering:false },
+  {cardName:'default', image: "http://image.tmdb.org/t/p/w1280/9n2tJBplPbgR2ca05hS5CKXwP2c.jpg",  title: 'Carrusel Flutter', tags: {title: 'Flutter', desc: 'Dart'}, isHovering:false },
+  { cardName:'default', image: "http://image.tmdb.org/t/p/w1280/9n2tJBplPbgR2ca05hS5CKXwP2c.jpg", title: 'Carrusel Angular', tags: {title: 'Angular', desc: 'Typscript'}, isHovering:false },
+  { cardName:'default', image: "http://image.tmdb.org/t/p/w1280/9n2tJBplPbgR2ca05hS5CKXwP2c.jpg", title: 'Carrusel Vite', tags: {title: 'Vite', desc: 'Html'}, isHovering:false },
+  { cardName:'default', image: "http://image.tmdb.org/t/p/w1280/9n2tJBplPbgR2ca05hS5CKXwP2c.jpg", title: 'Carrusel Games', tags: {title: 'Unity', desc: 'Unreal'}, isHovering:false }
 ]);
 
 console.log("cards", cards);
@@ -18,22 +22,22 @@ console.log("cards", cards);
 <template>
   <Menu/>
 
-  <div class="cards flex">
-    <CardsNetflix v-for="card in cards" :key="card.id" :image="card.image" :tags="card.tags" :title="card.title"/>
-  </div>
 
-  <br>
+ 
+  
+<div class="relative m-auto" style="max-width: 112rem;">  
 
-  <div class="cards flex">
-    <CardsHbo v-for="card in cards" :key="card.id" :image="card.image" :tags="card.tags" :title="card.title" />
-  </div>
+  <Cards :cards="cards"  />
+  <!-- <CardsHbo :cards="cardsHboMax"  />
+  <CardsNetflix :cards="cardsNetflix"  /> -->
+
+</div>
+
+
+
+
+
 
   
-  <br>
-  <br>
-  <br>
-
-  <div class="cards flex">
-    <Cards v-for="card in cards" :key="card.id" :image="card.image" :tags="card.tags" :title="card.title" />
-  </div>
+ 
 </template>
