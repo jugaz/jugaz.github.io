@@ -9,6 +9,11 @@ const router = createRouter({
       name: 'home',
       component: () => import( /* webpackChunkName: "Home" */'@/views/HomeView.vue')
     },
+    {
+      path: '/tendencias',
+      name: 'tendencias',
+      component: () => import( /* webpackChunkName: "Home" */'@/views/TendenciasView.vue')
+    },
     { path: "/:pathMatch(.*)*", redirect: "/" },
   ]
 })
